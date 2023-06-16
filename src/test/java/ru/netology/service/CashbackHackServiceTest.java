@@ -6,7 +6,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class CashbackHackServiceTest {
     @Test
-    public void shouldCashbackHackService1000(){
+    public void shouldCashbackHackService1000() {
         CashbackHackService cashbackHackService = new CashbackHackService();
 
         int amount = 1000;
@@ -14,10 +14,11 @@ public class CashbackHackServiceTest {
         int actual = cashbackHackService.remain(amount);
         int expected = 0;
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldCashbackHackService800(){
+    public void shouldCashbackHackService800() {
         CashbackHackService cashbackHackService = new CashbackHackService();
 
         int amount = 800;
@@ -25,10 +26,11 @@ public class CashbackHackServiceTest {
         int actual = cashbackHackService.remain(amount);
         int expected = 200;
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldCashbackHackService0(){
+    public void shouldCashbackHackService0() {
         CashbackHackService cashbackHackService = new CashbackHackService();
 
         int amount = 0;
@@ -36,10 +38,11 @@ public class CashbackHackServiceTest {
         int actual = cashbackHackService.remain(amount);
         int expected = 1000;
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldCashbackHackServiceMinus(){
+    public void shouldCashbackHackServiceMinus() {
         CashbackHackService cashbackHackService = new CashbackHackService();
 
         int amount = -50;
@@ -47,6 +50,6 @@ public class CashbackHackServiceTest {
         int actual = cashbackHackService.remain(amount);
         int expected = 1050;
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
     }
 }
